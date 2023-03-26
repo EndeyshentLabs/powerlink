@@ -1,0 +1,4 @@
+NAME="powerlink"
+BUILD_DIR="build"
+FILES="*.lua res/ README.md LICENSE"
+# vim:set ft=zsh:

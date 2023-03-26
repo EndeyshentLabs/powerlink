@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93333 270.93334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="powerlink.svg"
+   inkscape:export-filename="/home/wolfo/Coding/Gamedev/ReactorGame/res/gfx/powerlink.png"
+   inkscape:export-xdpi="651.59998"
+   inkscape:export-ydpi="651.59998">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="560.35719"
+     inkscape:cy="658.21232"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1596"
+     inkscape:window-height="876"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path10"
+       style="fill:#ffffff;stroke-width:18.3737"
+       d="M 135.46666,270.93333 A 135.46667,135.46667 0 0 0 270.93333,135.46666 135.46667,135.46667 0 0 0 135.46666,0 135.46667,135.46667 0 0 0 0,135.46666 135.46667,135.46667 0 0 0 135.46666,270.93333 Z m 0.002,-10.91406 V 135.46666 h 124.5526 a 124.55243,124.55243 0 0 1 -124.5526,124.55261 z m -0.002,-124.55054 H 10.914062 A 124.55243,124.55243 0 0 1 135.46666,10.916129 Z" />
+    <path
+       id="circle12"
+       style="fill:#ff0000;stroke-width:14.8767"
+       d="M 135.46423,25.780788 V 135.46472 H 245.14817 A 109.68378,109.68378 0 0 0 135.46423,25.780788 Z M 25.782577,135.46654 A 109.68378,109.68378 0 0 0 135.46651,245.15048 V 135.46654 Z" />
+  </g>
+</svg>
