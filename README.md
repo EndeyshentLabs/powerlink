@@ -22,3 +22,13 @@ $ ./fluid
 | <kbd>F5</kdb>    | Reload game               |
 | <kbd>Esc</kdb>   | Quit                      |
 | <kbd>E</kdb>     | !DEBUG! Quick run event   |
+
+### System requirements
+
+| Thing    | Minimum                           |
+| -------- | --------------------------------- |
+| OS       | Any that can run LOVE2D Framework(except Android and iOS) |
+| Monitor  | 1280x720 @ 60 Hz                  |
+| CPU      | Any that can run LOVE2D Framework |
+| Mouse    | None                              |
+| Keyboard | Yes                               |

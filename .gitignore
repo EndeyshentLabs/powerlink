@@ -1,5 +1,6 @@
 # Any build files
 build/
+app/
 *.zip
 *.gz
 *.tgz

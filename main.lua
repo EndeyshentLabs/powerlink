@@ -7,7 +7,7 @@ GlobarTimer = 0
 local heat = 0
 local water = 100
 local power = 0
-local ece = 40
+local ece = 30
 
 timer = 0
 dTime = 0
@@ -19,6 +19,7 @@ local lose = false
 
 local evTime = 0
 local evTimeStart = 0
+local evNum = 0
 
 font = nil
 sounds = {}
@@ -40,7 +41,7 @@ function love.load()
 end
 
 function love.update(dt)
-  if dt < 1 / 60 then love.timer.sleep(1 / 60 - dt) end
+  if dt < 1 / 60 then love.timer.sleep(1 / 60 - dt) end -- Force 60 FPS(RIP <60 Hz monitor users)
   GlobarTimer = GlobarTimer + 1
   if heat >= 2500 then
     started = false
@@ -55,7 +56,7 @@ function love.update(dt)
   if hasEvent then evTime = dTime - evTimeStart end
   sounds["energy"]:play()
   timer = timer + 1
-  power = (heat / water * ece ^ 2) -- * dt * 100
+  power = (heat / water * ece ^ 2) -- * dt * 10
 
   if not hasEvent then
     evTime = 0
@@ -74,16 +75,17 @@ function love.update(dt)
   end
 
   if ((dTime % 60 >= 0 and dTime % 60 <= 0.01) or (isDebug() and love.keyboard.isDown("e"))) and not hasEvent then
-    event, energy, time = RandomizeEvents()
+    event, energy, time, noMore = RandomizeEvents()
+    evNum = evNum + 1
     hasEvent = true
     evTimeStart = dTime
     if sounds["alarm"]:isPlaying() then sounds["alarm"]:stop() end
     sounds["signal"]:play()
-    if isDebug() then print(("EV: %s, EG: %d"):format(event, energy)) end
+    if isDebug() then print(("EV: \"%s\", EG: %d"):format(event, energy)) end
   end
 
   if water < 70 then
-    heat = (2 * ece / water + heat + 1 + water / 10) -- * dt * 100
+    heat = (2 * ece / water + heat + 1 + water / 10) -- * dt * 10
   end
 
   if water > 70 then
@@ -144,6 +146,9 @@ function love.draw()
 
   SetColorHEX("#ffffff")
   love.graphics.draw(images["powerlink2"], 0, love.graphics.getHeight() - (1024 / 2.9), 0, 0.05, 0.05)
+
+  SetColorHEX("#ff0000")
+  love.graphics.print(("\n\n\n\n\n\n\n\n\nNO. OF EVENTS %d"):format(evNum), font)
 
   if not started then offlineState() end
   if started then onlineState() end
