@@ -1,3 +1,5 @@
+ENERGY_LIMIT_DEFAULT = 9999999
+
 Events = {
   "This night will be very cold.\nBoilers will works harder.\nTown requires 5000kV", -- Boilers
   "Today will be a parade of Telsa coils.\nTown requires 10000kV",                   -- Tesla
@@ -16,7 +18,13 @@ EventsTime = {
   15,  -- Grill
 }
 
+EventsNoMore = {
+  ENERGY_LIMIT_DEFAULT, -- Boilers
+  ENERGY_LIMIT_DEFAULT, -- Telsa
+  ENERGY_LIMIT_DEFAULT, -- Grill
+}
+
 function RandomizeEvents()
   local i = love.math.random(1, #Events)
-  return Events[i], EventsEnrg[i], EventsTime[i]
+  return Events[i], EventsEnrg[i], EventsTime[i], EventsNoMore[i]
 end
